@@ -15,6 +15,10 @@ Each pair owns one HTML file — one station. A visitor should be able to:
 
 You'll need your station name, assigned in class. Your instructor will also send you an email invite to edit your station's Gem (the chatbot) — accept that before you start writing your AI questions.
 
+## A faster editor (optional)
+
+GitHub's basic file editor works fine for this project, but if you'd like syntax highlighting and a full file tree while you edit, press **.** while viewing the repository (or change `github.com` to `github.dev` in the URL bar). It opens a lightweight, browser-based version of VS Code connected to this repo — same edit-and-commit workflow, nothing to install.
+
 ## Step-by-step: creating your station page
 
 **1. Open this repository.** You're already here if you're reading this.
@@ -48,7 +52,12 @@ You'll need your station name, assigned in class. Your instructor will also send
 
 ## Adding photos
 
-Upload your image files the same way you created your HTML file: Add file → and drag your photo in, or use Upload files from the repo's main page. Then reference the filename in your <img src="..."> tag, matching exactly (case-sensitive).
+All images live in the `images` folder, not the main repository page. To add yours:
+
+  1. Open the `images` folder in this repository.
+  2. Click **Add file → Upload files**, and drag your photo in.
+  3. Name it after your station — lowercase, hyphens, no spaces — matching your HTML filename. For example, if your station is `fossil-wall.html`, name your photo `fossil-wall.jpg` (or `fossil-wall-1.jpg`, `fossil-wall-2.jpg` if you have more than one).
+  4. In your station's `<img>` tag, reference it with the `images/` prefix, matching exactly (case-sensitive): `<img src="images/fossil-wall.jpg" alt="describe what's in the photo">`.
 
 ## Getting your chatbot link
 
@@ -61,7 +70,7 @@ These are not part of your public station page. You'll collect notes from 3 test
 ## A few things to watch for
 
   - Edit only your own station file — leave everyone else's alone
-  - Filenames: lowercase, hyphens, no spaces, .html extension
+  - Filenames (HTML and images): lowercase, hyphens, no spaces
   - Test your own chatbot link before you submit — make sure it opens and responds sensibly
   - If something looks broken on your published page, check that your HTML tags are properly closed (an unclosed <div> can break the layout below it)
 
