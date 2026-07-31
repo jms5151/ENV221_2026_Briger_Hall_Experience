@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briger Hall Discovery Experience</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Source+Sans+3&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* Landing-page-only additions, layered on top of style.css */
+    .station-list {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .station-list li a {
+      display: block;
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .station-list li a:hover {
+      border-color: var(--moss);
+    }
+    .station-list li a .filename {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="station">
+
+    <div class="eyebrow">Briger Hall Discovery Experience</div>
+    <h1>Start Your Walk</h1>
+    <p class="intro">
+      Nine teams, nine features of Briger Hall, one building-wide AI experience. Pick any
+      station below to start — each one has something to learn, an AI assistant to chat
+      with, and a short activity to try. Stations link to each other, so once you're
+      inside you can just follow the trail.
+    </p>
+
+    <section class="section">
+      <h2><span class="marker">i</span> Stations</h2>
+      <ul class="station-list">
+        <li><a href="fossil-wall.html">Fossil Wall <span class="filename">fossil-wall.html — demo station, filled in as an example</span></a></li>
+        <li><a href="dinosaur-skeleton.html">Dinosaur Skeleton <span class="filename">dinosaur-skeleton.html</span></a></li>
+        <li><a href="geological-displays.html">Geological Displays <span class="filename">geological-displays.html</span></a></li>
+        <li><a href="sustainable-building-materials.html">Sustainable Building Materials <span class="filename">sustainable-building-materials.html</span></a></li>
+        <li><a href="energy-systems.html">Energy Systems <span class="filename">energy-systems.html</span></a></li>
+        <li><a href="water-conservation.html">Water Conservation Features <span class="filename">water-conservation.html</span></a></li>
+        <li><a href="public-art.html">Public Art <span class="filename">public-art.html</span></a></li>
+        <li><a href="building-history.html">Building History <span class="filename">building-history.html</span></a></li>
+        <li><a href="accessibility-features.html">Accessibility Features <span class="filename">accessibility-features.html</span></a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2><span class="marker">?</span> New Here?</h2>
+      <div class="activity">
+        If you're a student building a station, see <strong>README.md</strong> in this
+        repository for step-by-step instructions on creating and publishing your page.
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
