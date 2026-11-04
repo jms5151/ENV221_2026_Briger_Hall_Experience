@@ -1,79 +1,96 @@
-# Briger Hall Discovery Experience — Station Guide
+# Briger Hall Discovery Guide — Repository guide
 
-This repository holds every team's station for the Briger Hall Discovery Experience. Together, they form one building-wide AI experience. This guide walks you through building and publishing your station — keep it open while you work.
+Use this guide to create and publish your page. See the mini-project document for assignment requirements.
 
-## What you're building
+## 1. Make a new page
 
-Each pair owns one HTML file — one station. A visitor should be able to:
+1. Open `station-template.html` and copy the complete file.
+2. Return to the repository's main page and choose **Add file → Create new file**.
+3. Name your file using lowercase letters and hyphens, ending in `.html`, for example `dinosaur-skeleton.html`. Keep it in the main repository folder, alongside `style.css`.
+4. Paste the template.
+5. Select **Commit changes**, enter a short message, and save to the branch used in class.
 
-  - Learn something interesting about your feature
-  - Chat with an AI assistant about it
-  - Complete a short activity
-  - See how the feature connects to the UN Sustainable Development Goals
+Edit your own page and media files. Leave the shared template, `style.css`, and other pairs' files unchanged.
 
-## Before you touch any code
+## 2. Add and edit text
 
-You'll need your station name, assigned in class. Your instructor will also send you an email invite to edit your station's Gem (the chatbot) — accept that before you start writing your AI questions.
+Open your HTML file and click the pencil icon to edit it. Replace the bracketed placeholders with your text, leaving the surrounding HTML tags in place. Change the title in both `<title>` (the browser tab) and `<h1>` (the page heading).
 
-## A faster editor (optional)
+```html
+<p>Your paragraph goes here.</p>
+```
 
-GitHub's basic file editor works fine for this project, but if you'd like syntax highlighting and a full file tree while you edit, press **.** while viewing the repository (or change `github.com` to `github.dev` in the URL bar). It opens a lightweight, browser-based version of VS Code connected to this repo — same edit-and-commit workflow, nothing to install.
+Use a separate `<p>...</p>` for each paragraph. Instructions inside `<!-- comments -->` do not appear on the published page. Keep the stylesheet link near the top of the file so the shared formatting works.
 
-## Step-by-step: creating your station page
+For a clickable link, replace the address and visible text:
 
-**1. Open this repository.** You're already here if you're reading this.
+```html
+<a href="https://example.org">Link text</a>
+```
 
-**2. Open** **station-template.html****.** This is your starting point — it already has the structure and placeholders for every required section.
+The template's citation links, such as `href="#source-1"`, jump to an entry on the same page. Keep each link matched to the corresponding entry's `id="source-1"`.
 
-**3. Copy the entire file.** Click into the file content, select all (Ctrl+A on Windows, Cmd+A on Mac), and copy. GitHub doesn't have a "duplicate file" button, so this copy-paste step is the actual process — not a workaround.
+## 3. Upload and add photos
 
-**4. Go back to the repository's main page. Click** **Add file** **→** **Create new file****.**
+1. Open the repository's `images` folder.
+2. Choose **Add file → Upload files**, upload your image, and commit the upload.
+3. In your HTML file, replace the example image path, alt text, and caption:
 
-**5. Name your file after your station.** Use lowercase letters and hyphens, no spaces, ending in .html — for example fossil-wall.html or water-conservation.html.
+```html
+<figure class="feature-image">
+  <img src="images/dinosaur-skeleton.jpg"
+       alt="Dinosaur skeleton viewed from below, showing the ribs and curved neck.">
+  <figcaption>Dinosaur skeleton in Briger Hall. Photo by [name].</figcaption>
+</figure>
+```
 
-**6. Paste in the template content.**
+Use your own description and caption. **Alt text** describes the image for someone who cannot see it; **figcaption** is the caption displayed beneath it.
 
-**7. Fill in the placeholders directly in that box.** Each section is marked with an HTML comment (<!-- like this -->) telling you what goes there:
+Use lowercase, hyphenated filenames, such as `dinosaur-skeleton.jpg`. Match the uploaded extension exactly: `.jpg`, `.jpeg`, and `.png` are different. To add another image, copy the whole `<figure>...</figure>` block and change its path, alt text, and caption.
 
-| **Section** | **What to fill in** |
-| :-- | :-- |
-| Title & intro | Station title, 2–4 sentence description |
-| Ask the AI | Your Gem's shareable link (see below), plus 3 suggested questions |
-| Try This | A 1–2 minute activity — quiz, observation challenge, scavenger hunt, or puzzle |
-| Working Toward the UN SDGs | 1–3 relevant Sustainable Development Goals, plus 2–4 sentences on how this feature connects to or works toward them |
-| Continue exploring | A link and short blurb pointing to another station |
-| Images (optional) | 1–3 photos — see note below on adding image files |
+## 4. Upload and add audio
 
-**8. Save your work.** Scroll down, write a short commit message (e.g. "add fossil wall station"), select **"Commit directly to the main branch,"** and click **Commit changes**.
+Start with your downloaded MP3 file.
 
-**9. Make more edits anytime.** Open your file, click the pencil icon in the top right, edit, and commit again the same way. You'll come back to this after your Gem link is finalized and after you've collected tester feedback.
+1. Name it to match your page, such as `dinosaur-skeleton.mp3`.
+2. Open the repository's `audio` folder, choose **Add file → Upload files**, upload the MP3, and commit.
+3. In your HTML file, replace **both** `audio/your-feature.mp3` paths: one in the audio player and one in the MP3 link.
+4. Replace the audio caption and transcript placeholders.
 
-**10. View your live page.** Your site's address, followed by a slash and your filename — for example: https://[your-org].github.io/[repo-name]/fossil-wall.html. It can take a minute or two to appear after your first publish — refresh if it's not there right away.
+The audio block should look like this, with your own filename and caption:
 
-## Adding photos
+```html
+<figure class="audio-guide">
+  <figcaption id="audio-caption">Dinosaur skeleton — AI-narrated guide, 2:30.</figcaption>
+  <audio controls preload="metadata"
+         src="audio/dinosaur-skeleton.mp3"
+         aria-describedby="audio-caption">
+    Your browser does not support the audio player. Use the MP3 link below.
+  </audio>
+  <p><a href="audio/dinosaur-skeleton.mp3">Open the MP3 audio</a></p>
+</figure>
+```
 
-All images live in the `images` folder, not the main repository page. To add yours:
+Paste your transcript inside the template's `<div class="transcript-text">`, using `<p>...</p>` for paragraphs. Keep the surrounding `<details>` and `<summary>` tags; they create the expandable transcript panel.
 
-  1. Open the `images` folder in this repository.
-  2. Click **Add file → Upload files**, and drag your photo in.
-  3. Name it after your station — lowercase, hyphens, no spaces — matching your HTML filename. For example, if your station is `fossil-wall.html`, name your photo `fossil-wall.jpg` (or `fossil-wall-1.jpg`, `fossil-wall-2.jpg` if you have more than one).
-  4. In your station's `<img>` tag, reference it with the `images/` prefix, matching exactly (case-sensitive): `<img src="images/fossil-wall.jpg" alt="describe what's in the photo">`.
+If the `images` or `audio` folder is missing, ask your instructor to create it.
 
-## Getting your chatbot link
+## 5. Publish and open your page
 
-Your Gem lives under your instructor's Google account — only they can turn on the public "anyone with the link" setting. Once your Gem's instructions are finalized and tested, message your instructor to request the link, then paste it into the chat-link button in your file.
+Commit your HTML edits and media uploads to the branch used for the site. If GitHub Pages is already configured for that branch, commits publish automatically; allow a few minutes for changes to appear.
 
-## Tester feedback and your AI-use reflection
+For the standard GitHub Pages address for this repository, replace `your-file.html` with your filename:
 
-These are not part of your public station page. You'll collect notes from 3 testers and write a short reflection on how you used AI (what it did well, where it made mistakes, what testers revealed) as a separate written submission to your instructor — see the mini-project instructions for details on what to cover and where to submit it.
+`https://jms5151.github.io/ENV221_2026_Briger_Hall_Experience/your-file.html`
 
-## A few things to watch for
+Use the site address provided by your instructor if it differs. The address beginning with `github.com` is for editing repository files; the published page uses the site's address.
 
-  - Edit only your own station file — leave everyone else's alone
-  - Filenames (HTML and images): lowercase, hyphens, no spaces
-  - Test your own chatbot link before you submit — make sure it opens and responds sensibly
-  - If something looks broken on your published page, check that your HTML tags are properly closed (an unclosed <div> can break the layout below it)
+To make later changes, open your file, click the pencil, edit, and commit again. Uploading a file with the same name and folder replaces the existing media without needing to change its HTML path.
 
-## Stuck?
+## If something does not appear
 
-Reach out before class if you hit a wall on any of these steps — better to sort it out ahead of time than during your 80 minutes in the building.
+- **Page missing:** Check the filename and published address. Your HTML file should be in the main repository folder.
+- **Photo or audio missing:** Match the filename, capitalization, extension, and folder exactly. Use `images/filename.jpg` or `audio/filename.mp3`, not a path on your computer.
+- **Formatting missing:** Keep your page beside `style.css` and retain `<link rel="stylesheet" href="style.css">` in the `<head>`.
+- **Changes missing:** Make sure you committed them, wait a few minutes, and refresh the published page.
+- **Layout broken:** Look for accidentally deleted tags or quotation marks. Compare the affected block with `station-template.html`.
