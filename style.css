@@ -1,4 +1,4 @@
-/* Briger Hall Discovery Experience — shared station styling
+/* Briger Hall Discovery Guide — shared station styling
    Field-guide aesthetic: think trail markers, museum placards, a notebook in the field. */
 :root {
   --ink: #22302B;
@@ -7,7 +7,7 @@
   --moss: #4F6F52;
   --rust: #A65A2E;
   --line: #C8CDC2;
-  --muted: #6B7268;
+  --muted: #596254;
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Source Sans 3", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -20,10 +20,26 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
 }
+a { color: #3E5D40; text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible, audio:focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 4px;
+}
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -8rem;
+  padding: 0.75rem 1rem;
+  background: var(--paper-raised);
+  z-index: 1;
+}
+.skip-link:focus { top: 1rem; }
 .station {
   max-width: 720px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem 4rem;
+  overflow-wrap: anywhere;
 }
 
 /* Eyebrow + title */
@@ -160,4 +176,59 @@ h1 {
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
   margin: 0 0.4rem 0.4rem 0;
+}
+
+/* Feature-guide additions. Earlier station classes above remain available. */
+.feature-image { margin: 1.25rem 0; }
+.feature-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+figcaption {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.counterfactual {
+  background: var(--paper-raised);
+  border-left: 3px solid var(--moss);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+}
+.scenario-label {
+  margin-top: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3E5D40;
+}
+.counterfactual p:last-child, .activity p:last-child { margin-bottom: 0; }
+.activity p:first-child { margin-top: 0; }
+.uncertainty { color: var(--muted); }
+.sources { padding-left: 1.5rem; }
+.sources li { margin-bottom: 1rem; scroll-margin-top: 1.5rem; }
+.sources li:target {
+  background: var(--paper-raised);
+  outline: 2px solid var(--moss);
+  outline-offset: 4px;
+}
+.audio-guide, .transcript {
+  margin: 1rem 0;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.audio-guide figcaption { margin: 0 0 1rem; color: var(--ink); }
+.audio-guide audio { display: block; width: 100%; }
+.audio-guide p { margin-bottom: 0; }
+.transcript summary { cursor: pointer; font-weight: 600; }
+.transcript-text { margin-top: 1rem; }
+@media (max-width: 480px) {
+  .station { padding: 1.75rem 1rem 3rem; }
+  .section h2 { align-items: flex-start; }
+  .marker { margin-top: 0.15rem; }
+  .audio-guide, .transcript { padding: 1rem; }
 }
