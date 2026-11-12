@@ -17,6 +17,19 @@
     .label-table th, .label-table td { text-align: left; vertical-align: top; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--line); }
     .label-table th { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; }
     .label-table td:first-child, .label-table th:first-child { white-space: nowrap; }
+    .quiz { margin: 1.25rem 0; }
+    .quiz ol { margin: 0.25rem 0 0.75rem; padding-left: 1.6rem; }
+    .quiz li { margin-bottom: 0.3rem; }
+    .quiz summary { cursor: pointer; font-weight: 600; color: #3E5D40; }
+    .quiz details p { margin: 0.5rem 0 0; }
+    .chart { margin: 1.25rem 0; }
+    .chart svg { display: block; width: 100%; max-width: 520px; height: auto; margin: 0 auto; }
+    .chart .bar-label { fill: var(--ink); font: 15px var(--font-body); }
+    .chart .bar-value { fill: var(--ink); font: 600 15px var(--font-body); }
+    .chart .axis { stroke: var(--line); stroke-width: 1; }
+    .chart .bar-air { fill: var(--rust); }
+    .chart .bar-sea { fill: var(--moss); }
+    .chart .bar-truck { fill: var(--moss); }
   </style>
 </head>
 <body>
@@ -24,62 +37,158 @@
   <main class="station" id="main-content">
     <header>
       <div class="eyebrow">Briger Hall Discovery Guide</div>
-      <h1>The Mineral Porthole: 24 Specimens, 14 Countries</h1>
+      <h1>The Mineral Porthole</h1>
       <p class="intro">A glowing round niche holds two dozen crystals, each on a small brass stand with a label that names a place: Jiangxi, Coahuila, Gilgit-Baltistan, Elba. Every one of these rocks was dug out of the ground somewhere else and carried here. Our question: what did it take to assemble a collection like this, and what would change if Briger Hall showed New Jersey's own minerals instead?</p>
     </header>
 
+    <section class="section" aria-labelledby="listen-heading">
+      <h2 id="listen-heading"><span class="marker" aria-hidden="true">1</span> Listen and look</h2>
+      <figure class="audio-guide">
+        <figcaption id="audio-caption">The Mineral Porthole — AI-generated narrated guide, 3:24. A three-minute walk through the labels, the New Jersey alternative, and what each choice would cost.</figcaption>
+        <audio controls preload="metadata" src="audio/geological-displays.mp3" aria-describedby="audio-caption">
+          Your browser does not support the audio player. Use the MP3 link below.
+        </audio>
+        <p><a href="audio/geological-displays.mp3">Open the MP3 audio</a></p>
+      </figure>
+      <details class="transcript">
+        <summary>Read the complete audio transcript</summary>
+        <div class="transcript-text">
+          <p>Stop for a second in front of the glowing circle. Twenty-four rocks sit on five glass shelves. Pick any one and read the small label under it. The first line is the mineral's name. The second line is a place. Jiangxi, China. Coahuila, Mexico. Gilgit-Baltistan, Pakistan. Elba, Italy.</p>
+          <p>We counted every label. There are twenty-four specimens from fourteen countries on six continents. Two come from the United States, none come from New Jersey, and one, the dark, spiky stibnite on the bottom shelf, has a label that simply says "locality unknown".</p>
+          <p>Every one of these rocks was dug out of the Earth somewhere else and carried here. They belong to Carl Heimowitz, class of 1964, and Edna Heimowitz, and they are on loan to Princeton's mineral collection, which holds about six thousand specimens.</p>
+          <p>Now look at the bottom right. Stilbite and heulandite on quartz, from Maharashtra, India. These crystals grew inside gas bubbles in cooling lava. The very same minerals grew the same way in the lava of New Jersey's Watchung Mountains, about two hundred million years ago. The quarries around Paterson, an hour from this room, were famous for them a century ago.</p>
+          <p>So here is our question. Imagine this circle held only New Jersey minerals. Paterson zeolites, plus the minerals of Franklin and Sterling Hill, which glow under ultraviolet light.</p>
+          <p>What would change for the environment? Switching would not repair harm that has already happened, but it could reduce the harm from buying more minerals in the future. Every specimen is a piece of a mine. The green malachite on the fourth shelf is copper ore from the Democratic Republic of the Congo. In the mining city of Kolwezi, researchers found that children living beside the mines had about ten times as much cobalt in their bodies as children elsewhere, because mining dust settles on their homes. This malachite did not cause that harm, but buying minerals from places like this supports the mining behind it.</p>
+          <p>A New Jersey case would draw on quarries that closed long ago, and new pieces would travel a short drive instead of crossing oceans. We estimate that flying these twenty-four specimens here released about one hundred and eighty kilograms of carbon dioxide. Trucking New Jersey minerals from Franklin would release less than half a kilogram.</p>
+          <p>What would change for people? A New Jersey case would feel closer to home, but it would show fewer kinds of minerals. You could drive an hour and stand on the rock that made the crystal. Franklin and Sterling Hill have produced more than three hundred and sixty mineral species, so local would not mean ordinary. But you would lose ruby from Tanzania, desert roses from Mexico, and the many ways the Earth makes a crystal. Many Franklin minerals also look grey in ordinary light, so the case would need ultraviolet lamps, and light can fade about one in ten mineral species.</p>
+          <p>What we do not know is how and when these specimens were bought. If they came from old collections, their environmental cost today is close to zero, and the real question is what visitors learn.</p>
+          <p>So, while you stand here: if this circle held only New Jersey rocks, would you stop longer, or walk past? What would you gain, and what would you lose?</p>
+        </div>
+      </details>
+      <div class="activity">
+        <p><strong>Consider:</strong> If this porthole held only New Jersey rocks, would you stop longer, or walk past? What would you gain, and what would you lose?</p>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="find-heading">
-      <h2 id="find-heading"><span class="marker" aria-hidden="true">1</span> Find it</h2>
-      <p><strong>Where to find it:</strong> Level 1, near the Commons, in the large circular, backlit wall niche beside the fossil skull display, near the windows. You cannot miss the glow: a white ring of light behind five frosted-glass shelves.</p>
+      <h2 id="find-heading"><span class="marker" aria-hidden="true">2</span> Find it</h2>
+      <p><strong>Where to find it:</strong> Level 1, near the Commons, in the large circular, backlit wall niche beside the fossil skull display, near the windows. You cannot miss the glow: a white ring of light behind five frosted-glass shelves (Figure 1).</p>
       <figure class="feature-image">
         <img src="images/geological-displays.jpg" alt="A circular, backlit wall niche in Briger Hall with five glass shelves holding twenty-four mineral specimens on small brass stands, each with a printed label beneath it.">
-        <figcaption>The mineral porthole in Briger Hall, all 24 specimens on loan from the Carl '64 &amp; Edna Heimowitz Collection. Photo by Riya Pawar and Nathan Nguyen.</figcaption>
+        <figcaption><strong>Figure 1.</strong> The mineral porthole in Briger Hall, all 24 specimens on loan from the Carl '64 &amp; Edna Heimowitz Collection. Photo by Riya Pawar and Nathan Nguyen.</figcaption>
       </figure>
       <figure class="feature-image">
         <img src="images/geological-displays-labels.jpg" alt="Close-up of the lower shelves: a green malachite labelled Democratic Republic of the Congo, a black hematite from Elba, Italy, a dark spiky stibnite labelled Locality unknown, and a stilbite and heulandite on quartz from Maharashtra, India.">
-        <figcaption>Lower shelves, with the labels that started this page: malachite from the DR Congo, stibnite of unknown origin, and stilbite and heulandite from Maharashtra, India. Photo by Riya Pawar and Nathan Nguyen.</figcaption>
+        <figcaption><strong>Figure 2.</strong> Zoomed in on the lower shelves: malachite from the DR Congo, stibnite of unknown origin, and stilbite and heulandite from Maharashtra, India. Photo by Riya Pawar and Nathan Nguyen.</figcaption>
       </figure>
       <div class="activity">
-        <p><strong>Look closely:</strong> Read the second line of a few labels, the place names. How many countries can you find? Then look for the one specimen whose label says <em>Locality unknown</em>: the dark, spiky stibnite on the bottom shelf.</p>
-        <p><strong>Look closely, again:</strong> Two places on these shelves each sent two specimens, and their labels name the same region, not just the same country. Can you find both pairs? Hint: three of the four contain stilbite, and all four sit on the middle and bottom shelves. (Check your answer in the label table under <a href="#sources-heading">Show how you know</a>.)</p>
+        <p><strong>Look closely:</strong> Read the second line of a few labels, the place names (Figure 2 shows some of them). How many countries can you find? Then look for the one specimen whose label says <em>Locality unknown</em>: the dark, spiky stibnite on the bottom shelf.</p>
+        <p><strong>Look closely, again:</strong> Two places on these shelves each sent two specimens, and their labels name the same region, not just the same country. Can you find both pairs? Hint: three of the four contain stilbite, and all four sit on the middle and bottom shelves. (Check your answer in the label table under <a href="#sources-heading">References</a>.)</p>
       </div>
     </section>
 
     <section class="section" aria-labelledby="interesting-heading">
-      <h2 id="interesting-heading"><span class="marker" aria-hidden="true">2</span> Why is it interesting?</h2>
+      <h2 id="interesting-heading"><span class="marker" aria-hidden="true">3</span> Why is it interesting?</h2>
       <p><strong>Our observation:</strong> We counted and transcribed every label. There are 24 specimens on five shelves, from 14 countries on six continents. Six come from China, two from Brazil, two from Pakistan, two from India, and two from the United States (Tennessee and Washington). None is from New Jersey, and one, the stibnite, has no recorded locality. Every label carries the same credit line: Carl '64 &amp; Edna Heimowitz Collection.</p>
       <p>The specimens are on loan to Princeton's Mineral and Gem Collection, which holds about 6,000 catalogued specimens gathered over roughly 200 years, and which lists Heimowitz loans of pyrite, barite, cerussite, malachite and desert rose selenite, all of which you can see here. <a href="#source-1">[1]</a></p>
       <p>Grouped by how they formed, the shelves tell a story about the whole planet. The desert rose and selenite grew as water evaporated. Fluorite, galena, sphalerite and barite crystallised from hot, mineral-rich water moving through cracks in rock. Malachite is what copper ore becomes as it weathers. Nephrite and ruby in zoisite were cooked and squeezed deep underground. And the stilbite, heulandite, apophyllite and cavansite grew inside gas bubbles in cooling lava.</p>
-      <p>That last group is the surprise. The same zeolite minerals, stilbite, heulandite, chabazite and prehnite, grew the same way in the basalt of New Jersey's First Watchung Mountain, lava that erupted about 201 million years ago at the end of the Triassic period, <a href="#source-8">[8]</a> and the trap-rock quarries around Paterson, about an hour from this room, were famous for them a century ago. <a href="#source-2">[2]</a> The best crystals formed in open pockets, "vugs", that quarrying happened to expose. <a href="#source-2">[2]</a> We observed that the porthole holds Indian zeolites but no New Jersey ones.</p>
+      <p>That last group is the surprise. The same zeolite minerals, stilbite, heulandite, chabazite and prehnite, grew the same way in the basalt of New Jersey's First Watchung Mountain, lava that erupted about 201 million years ago at the end of the Triassic period, <a href="#source-8">[8]</a> and the trap-rock quarries around Paterson, about an hour from this room, were famous for them a century ago. <a href="#source-2">[2]</a> The best crystals formed in open pockets, "vugs", that quarrying happened to expose. <a href="#source-2">[2]</a> We observed that the porthole holds Indian zeolites but no New Jersey ones. Figure 3 shows the New Jersey basalt that hosted these crystals.</p>
+      <figure class="feature-image">
+        <img src="images/watchung-basalt.jpg" alt="A grey-green cliff of fractured basalt rising beside a leafless woodland, with long vertical cracks splitting the rock into blocks.">
+        <figcaption><strong>Figure 3.</strong> Basalt from the Watchung Mountains, New Jersey: the lava flow whose gas bubbles grew zeolite crystals. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:WatchungStackedBasalt.jpg">Wikimedia Commons</a>.</figcaption>
+      </figure>
+      <div class="activity quiz">
+        <p><strong>Quick check:</strong> How did the stilbite from India and the stilbite from Paterson, New Jersey, both form?</p>
+        <ol type="A">
+          <li>As water evaporated in a desert</li>
+          <li>Inside gas bubbles in cooling lava</li>
+          <li>Deep underground under heat and pressure</li>
+        </ol>
+        <details>
+          <summary>Show answer</summary>
+          <p><strong>B.</strong> Both grew inside gas bubbles in cooling lava. That is why the same minerals turn up in India and in New Jersey's Watchung basalt (Figure 3).</p>
+        </details>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="what-if-heading">
-      <h2 id="what-if-heading"><span class="marker" aria-hidden="true">3</span> What if / What might change?</h2>
+      <h2 id="what-if-heading"><span class="marker" aria-hidden="true">4</span> What if / What might change?</h2>
       <div class="counterfactual">
         <p class="scenario-label">Hypothetical alternative</p>
-        <p>Imagine the same porthole filled only with New Jersey minerals: stilbite, heulandite, prehnite and chabazite from the old Paterson quarries, and the fluorescent calcite and willemite (and the black, non-glowing franklinite) of Franklin and Sterling Hill in Sussex County, about 70 miles north of campus. Same niche, same lighting, same purpose (show visitors what crystals look like and how they form), but every label would read "New Jersey, USA". Three swaps show what that would mean on the shelves:</p>
+        <p>Imagine the porthole held only New Jersey minerals: stilbite, heulandite and prehnite from the old Paterson quarries, and the glowing calcite and willemite of Franklin and Sterling Hill, about 70 miles north of campus. The niche, the lighting and the purpose (showing how crystals form) would stay the same, but every label would read "New Jersey, USA". Three swaps show what would change:</p>
         <ol class="swaps">
-          <li><strong>Stilbite &amp; Heulandite on Quartz</strong> (Maharashtra, India; bottom shelf, right) becomes stilbite and heulandite from the Paterson trap-rock quarries. Same minerals, grown the same way, in gas bubbles in cooling lava. <a href="#source-2">[2]</a></li>
-          <li><strong>Apophyllite &amp; Stilbite</strong> (Gilgit-Baltistan, Pakistan; middle shelf) becomes pale green prehnite from the same First Watchung basalt. <a href="#source-2">[2]</a> This drops a specimen from a region dug mainly for gems and collector pieces.</li>
-          <li><strong>Malachite</strong> (Democratic Republic of the Congo; fourth shelf) becomes willemite and calcite from Franklin: plain-looking under white light, but green and orange-red under shortwave ultraviolet. <a href="#source-9">[9]</a> This removes the case's link to the copper and cobalt belt described below.</li>
+          <li><strong>Stilbite &amp; Heulandite on Quartz</strong> (Maharashtra, India) becomes stilbite and heulandite from the Paterson quarries. These are the same minerals, and they formed the same way, in gas bubbles in cooling lava. <a href="#source-2">[2]</a></li>
+          <li><strong>Apophyllite &amp; Stilbite</strong> (Gilgit-Baltistan, Pakistan) becomes pale green prehnite from the same Watchung basalt. <a href="#source-2">[2]</a></li>
+          <li><strong>Malachite</strong> (Democratic Republic of the Congo) becomes willemite and calcite from Franklin, which look plain in white light but glow green and orange-red under shortwave ultraviolet (Figure 4). <a href="#source-9">[9]</a></li>
         </ol>
       </div>
-      <p><strong>For the environment:</strong> A mineral specimen is a small piece of a mine or quarry. The green malachite on the fourth shelf is copper ore from the Democratic Republic of the Congo, whose copper and cobalt belt supplies much of the world's cobalt. A 2018 study in the mining city of Kolwezi found that children living beside the mines had about ten times as much cobalt in their urine as children elsewhere, because dust from mining settles on homes and soil. <a href="#source-3">[3]</a> The malachite here did not cause that harm, but a global collection quietly depends on those industries and gives them a beautiful face. Where a locality is dug mainly for gems and specimens rather than for ore, as is common in the small mountain mines of Gilgit-Baltistan that produced the aquamarine and apophyllite here, collector demand itself drives the digging.</p>
-      <p>A New Jersey-only case would not undo any of this (these rocks are already out of the ground), but it would shift future acquisitions toward quarries and mines that closed long ago: the Upper New Street Quarry in Paterson operated from 1893 to 1925, <a href="#source-4">[4]</a> and Sterling Hill is now a museum. <a href="#source-5">[5]</a> New specimens would come from old collections rather than new digging, and shipping would shrink to a short drive. Shipping is the one part of the footprint we can put a rough number on, so we did.</p>
-      <p><strong>Our hypothetical estimate of shipping</strong> (our own calculation, not a measurement):</p>
+      <div class="gallery" role="group" aria-label="Willemite and calcite from Franklin, New Jersey, in white light and under ultraviolet light">
+        <figure>
+          <img src="images/willemite-calcite-daylight.jpg" alt="A lumpy grey and white rock from Franklin, New Jersey, in ordinary light.">
+          <figcaption><strong>Figure 4a.</strong> In white light, the rock looks plain.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/willemite-calcite-uv.jpg" alt="The same rock under ultraviolet light, glowing bright green in patches and orange-red elsewhere, with black patches that do not glow.">
+          <figcaption><strong>Figure 4b.</strong> Under shortwave ultraviolet light, willemite glows green and calcite glows orange-red. The black patches are franklinite, which does not glow.</figcaption>
+        </figure>
+      </div>
+      <p class="credit" style="font-size:0.95rem;color:var(--muted);margin-top:0.5rem">Photos by Jud McCranie, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons (<a href="https://commons.wikimedia.org/wiki/File:Willemite_calcite_in_daylight.jpg">daylight</a>, <a href="https://commons.wikimedia.org/wiki/File:Willemite_calcite_in_ultraviolet_light.jpg">ultraviolet</a>). Rock from Franklin, New Jersey.</p>
+      <p><strong>For the environment:</strong> Switching to New Jersey minerals would not repair harm that has already happened, but it could reduce the harm from buying more minerals in the future. Every specimen is a piece of a mine or quarry. The malachite, for example, is copper ore from the Democratic Republic of the Congo, whose copper and cobalt belt supplies much of the world's cobalt. A 2018 study in the mining city of Kolwezi found that children living beside the mines had about ten times as much cobalt in their urine as children elsewhere, because mining dust settles on homes and soil. <a href="#source-3">[3]</a> This malachite did not cause that harm, but buying minerals from such regions supports the mining behind it. Mines in places like Gilgit-Baltistan are dug mainly for gems and collector pieces, so collectors' demand itself drives the digging.</p>
+      <p>These rocks are already out of the ground, so a New Jersey-only case would not undo any digging that has been done. What it would change is where new specimens come from. Future additions could come from sites that closed long ago instead of from new digging (the Upper New Street Quarry ran from 1893 to 1925 <a href="#source-4">[4]</a> and Sterling Hill is now a museum <a href="#source-5">[5]</a>), and they would travel a short drive instead of crossing oceans. We estimated the shipping part, and Figure 5 charts the results:</p>
       <ul class="estimate">
-        <li><strong>Assumptions:</strong> 24 specimens at about 1 kg each including packing, so 24 kg in all; each flown about 10,000 km (6,200 miles) to the United States; and EPA's air-freight factor of 1.086 kg of CO<sub>2</sub> per short ton-mile. <a href="#source-7">[7]</a></li>
-        <li><strong>Result:</strong> 24 kg is 0.026 short tons. Multiplied by 6,200 miles, that gives about 165 ton-miles, or roughly <strong>180 kg of CO<sub>2</sub></strong> for the whole collection, about 7 kg per specimen. That is about one airline passenger's share of a single 1,400-mile flight, roughly Newark to Dallas. <a href="#source-7">[7]</a></li>
-        <li><strong>For comparison:</strong> trucking the same 24 kg of New Jersey minerals 70 miles from Franklin would release about 0.3 kg. Shipping the global set by sea instead of air would release about 13 kg. <a href="#source-7">[7]</a></li>
+        <li><strong>Assumptions:</strong> 24 specimens at about 1 kg each, each flown about 10,000 km (6,200 miles), with EPA's air-freight factor of 1.086 kg of CO<sub>2</sub> per short ton-mile. <a href="#source-7">[7]</a></li>
+        <li><strong>Result:</strong> about 165 ton-miles, or roughly <strong>180 kg of CO<sub>2</sub></strong> for the whole collection. That is about one airline passenger's share of a Newark to Dallas flight. <a href="#source-7">[7]</a></li>
+        <li><strong>For comparison:</strong> trucking 24 kg of minerals 70 miles from Franklin would release about 0.3 kg. Shipping the global set by sea would release about 13 kg. <a href="#source-7">[7]</a></li>
       </ul>
-      <p>Even at 180 kg, shipping is probably small next to the mines themselves, which we could not put a number on.</p>
-      <p><strong>For people:</strong> With a local case, a visitor could drive an hour and stand on the rock that made the crystal. Sterling Hill and Franklin together have produced more than 360 mineral species, about 90 of them fluorescent and more than two dozen found nowhere else on Earth, <a href="#source-5">[5]</a> so "local" would not mean "ordinary". The lesson would change too: spectacular geology is not only somewhere else. But the losses are real. You would give up ruby from Tanzania, desert roses from Mexico, malachite from the Congo, and the sheer range of ways the Earth makes a crystal. A donor's gift is specific; Princeton could not simply swap it for a New Jersey set without a new donor. And many Franklin minerals look grey under ordinary light. To make them glow you would need ultraviolet lamps, which means more hardware and more light, and light is its own tradeoff: roughly one in ten mineral species is vulnerable under museum conditions, and fading or loss of colour under light is one of the main risks. <a href="#source-6">[6]</a></p>
-      <p class="uncertainty"><strong>What we do not know:</strong> We do not know how, when, or from whom the Heimowitz specimens were acquired, or whether they came out of working ore mines or collector digs. The labels give a region, not a mine, and one gives nothing at all. If most were bought from older collections decades ago, their marginal environmental cost today is close to zero and the comparison is really about what visitors learn, not what was disturbed. Our shipping estimate rests on assumed weights and distances: real distances range from about 3,000 km (Mexico) to more than 16,000 km (South Australia), though 10,000 km is close to the average straight-line distance from the 23 named localities to New Jersey (our rough calculation), and we do not know whether the specimens flew, sailed, or travelled together. EPA's factor is an average for U.S. air freight and leaves out the extra warming from high-altitude flight, trucking at each end, and the packing materials themselves. We also could not measure the LED ring's power draw, so we cannot say how much a UV-lit alternative would add.</p>
+      <figure class="chart">
+        <svg viewBox="0 0 400 210" role="img" aria-labelledby="chart-title chart-desc">
+          <title id="chart-title">Estimated carbon dioxide from moving 24 mineral specimens</title>
+          <desc id="chart-desc">Horizontal bars: flying the specimens 10,000 kilometres emits about 180 kilograms of carbon dioxide, shipping them by sea about 13 kilograms, and trucking them 70 miles from Franklin, New Jersey about 0.3 kilograms.</desc>
+          <text class="bar-label" x="0" y="18">Flown 10,000 km</text>
+          <rect class="bar-air" x="0" y="26" width="320" height="26" rx="3"/>
+          <text class="bar-value" x="328" y="45">180 kg</text>
+          <text class="bar-label" x="0" y="87">Shipped by sea</text>
+          <rect class="bar-sea" x="0" y="95" width="23" height="26" rx="3"/>
+          <text class="bar-value" x="31" y="114">13 kg</text>
+          <text class="bar-label" x="0" y="156">Trucked 70 miles from Franklin, NJ</text>
+          <rect class="bar-truck" x="0" y="164" width="2" height="26" rx="1"/>
+          <text class="bar-value" x="10" y="183">0.3 kg</text>
+        </svg>
+        <figcaption><strong>Figure 5.</strong> Estimated CO<sub>2</sub> from moving 24 specimens (about 24 kg in total). The first two bars assume the specimens travel an average of 10,000 km, and the last assumes the New Jersey set travels 70 miles from Franklin. Our own calculation from EPA factors <a href="#source-7">[7]</a>.</figcaption>
+      </figure>
+      <p>Shipping is probably a small part of the total environmental cost compared with the mining itself, but we could not measure the mining.</p>
+      <div class="activity quiz">
+        <p><strong>Quick check:</strong> Which way of moving the 24 specimens releases the least CO<sub>2</sub>?</p>
+        <ol type="A">
+          <li>Flying them about 10,000 km</li>
+          <li>Shipping them by sea</li>
+          <li>Trucking New Jersey minerals 70 miles from Franklin</li>
+        </ol>
+        <details>
+          <summary>Show answer</summary>
+          <p><strong>C.</strong> Trucking releases about 0.3 kg, compared with about 13 kg by sea and about 180 kg by air (Figure 5).</p>
+        </details>
+      </div>
+      <p><strong>For people:</strong> A New Jersey case would make the collection feel closer to home, but it would show visitors fewer kinds of minerals. A visitor could drive an hour and stand on the rock that made the crystal. Sterling Hill and Franklin have produced more than 360 mineral species, about 90 of them fluorescent and more than two dozen found nowhere else on Earth, <a href="#source-5">[5]</a> so local minerals would not be ordinary. The message would also change: spectacular geology is not only somewhere else.</p>
+      <p>The case would also lose something. Visitors would no longer see ruby from Tanzania, desert roses from Mexico, malachite from the Congo, or the many different ways Earth makes crystals. The case is a donor's gift, so a New Jersey set would need a new donor. Many Franklin minerals look grey in ordinary light, so showing their glow requires ultraviolet lamps. Those lamps add equipment and light, and light can damage minerals: roughly one in ten mineral species is vulnerable under museum conditions, and fading is one of the main risks. <a href="#source-6">[6]</a></p>
+      <div class="activity quiz">
+        <p><strong>Quick check:</strong> Why would a New Jersey-only case not undo the mining harm linked to the malachite?</p>
+        <ol type="A">
+          <li>The malachite is already out of the ground, so the case only changes where future specimens come from</li>
+          <li>New Jersey mines cause more pollution than mines in the Congo</li>
+          <li>Malachite is not mined for copper</li>
+        </ol>
+        <details>
+          <summary>Show answer</summary>
+          <p><strong>A.</strong> These rocks have already been dug up. A local case could only steer future additions toward closed quarries instead of new digging.</p>
+        </details>
+      </div>
+      <p class="uncertainty"><strong>What we do not know:</strong> We do not know how or from whom the Heimowitz specimens were acquired, or whether they came from working ore mines or collector digs. The labels give a region, not a mine. If most were bought from older collections decades ago, their environmental cost today is close to zero and the real comparison is about what visitors learn. Our shipping estimate rests on assumed weights and distances. Real distances range from about 3,000 km (Mexico) to more than 16,000 km (South Australia), and 10,000 km is close to the average from the 23 named localities to New Jersey (our rough calculation). The EPA factor is a U.S. air-freight average and leaves out the extra warming from high-altitude flight, trucking at each end, and packing. We could not measure the LED ring's power draw, so we do not know what a UV-lit alternative would add.</p>
     </section>
 
     <section class="section" aria-labelledby="sources-heading">
-      <h2 id="sources-heading"><span class="marker" aria-hidden="true">4</span> Show how you know</h2>
-      <p>Our counts in section 2 come from transcribing every label in the porthole ourselves. The published sources follow the table.</p>
+      <h2 id="sources-heading"><span class="marker" aria-hidden="true">5</span> References</h2>
+      <p>Our counts in section 3 come from transcribing every label in the porthole ourselves. The published sources follow the table.</p>
       <details class="transcript">
         <summary>Show all 24 specimen labels</summary>
         <div class="label-table-wrap">
@@ -129,34 +238,6 @@
         <li id="source-8">Blackburn, T. J., et al. <a href="https://doi.org/10.1126/science.1234204">Zircon U-Pb Geochronology Links the End-Triassic Extinction with the Central Atlantic Magmatic Province</a>. <em>Science</em> 340, 941–945, 2013. Age of the Orange Mountain Basalt, which forms First Watchung Mountain. The basalt itself yielded no datable zircon; its age comes from the chemically identical Palisade Sill that fed it, dated to 201.52 million years ago.</li>
         <li id="source-9">Franklin-Ogdensburg Mineralogical Society. <a href="https://fomsnj.org/Fluorescent_Franklin_Mineral.aspx?OFID=116">Fluorescent clinohedrite, calcite, willemite and hardystonite under shortwave UV light</a>. Accessed November 2026. Fluorescence colours of willemite (green) and calcite (orange-red) from Franklin, New Jersey.</li>
       </ol>
-    </section>
-
-    <section class="section" aria-labelledby="listen-heading">
-      <h2 id="listen-heading"><span class="marker" aria-hidden="true">5</span> Listen and look</h2>
-      <figure class="audio-guide">
-        <figcaption id="audio-caption">The Mineral Porthole — AI-generated narrated guide, 3:09. A three-minute walk through the labels, the New Jersey alternative, and what each choice would cost.</figcaption>
-        <audio controls preload="metadata" src="audio/geological-displays.mp3" aria-describedby="audio-caption">
-          Your browser does not support the audio player. Use the MP3 link below.
-        </audio>
-        <p><a href="audio/geological-displays.mp3">Open the MP3 audio</a></p>
-      </figure>
-      <details class="transcript">
-        <summary>Read the complete audio transcript</summary>
-        <div class="transcript-text">
-          <p>Stop for a second in front of the glowing circle. Twenty-four rocks on five glass shelves. Pick any one and read the small label under it. The first line is the mineral's name. The second line is a place. Jiangxi, China. Coahuila, Mexico. Gilgit-Baltistan, Pakistan. Elba, Italy.</p>
-          <p>We counted. Twenty-four specimens, fourteen countries, six continents. Two from the United States, none from New Jersey, and one, the dark spiky stibnite on the bottom shelf, whose label simply says "locality unknown".</p>
-          <p>Every one of these was dug out of the Earth somewhere else and carried here. They belong to Carl Heimowitz, class of 1964, and Edna Heimowitz, and are on loan to Princeton's mineral collection, which holds about six thousand specimens.</p>
-          <p>Now look at the bottom right. Stilbite and heulandite on quartz, from Maharashtra, India. These crystals grew inside gas bubbles in cooling lava, around sixty-six million years ago. Here is the thing. The very same minerals, stilbite, heulandite, prehnite, grew the same way in the lava flows of New Jersey's Watchung Mountains about two hundred million years ago, and the quarries around Paterson, an hour from this room, were famous for them a century ago.</p>
-          <p>So here is our hypothetical. Imagine this circle held only New Jersey minerals. Paterson zeolites, plus the fluorescent minerals of Franklin and Sterling Hill, where more than three hundred and sixty mineral species have been found, around ninety of them fluorescent.</p>
-          <p>What would change? Start with the environment. A specimen is a small piece of a mine. The green malachite on the fourth shelf is copper ore from the Democratic Republic of the Congo. In the mining city of Kolwezi, researchers found that children living beside the mines carried about ten times as much cobalt in their bodies as children elsewhere, because mining dust settles on their homes. This malachite did not cause that. But a global collection quietly depends on those industries, and gives them a beautiful face. A New Jersey case would draw on quarries and mines that closed decades ago, so new additions would come from old collections rather than new digging.</p>
-          <p>Now people. With a local case you could drive an hour and stand on the rock that made the crystal. You would learn that spectacular geology is not only somewhere else. But you would lose a lot: ruby from Tanzania, desert roses from Mexico, the sheer range of ways the Earth makes a crystal. And under ordinary light, many Franklin minerals look grey. You would need ultraviolet lamps to make them glow. More hardware, more light. And light is its own tradeoff, because roughly one in ten mineral species can fade or change under museum conditions.</p>
-          <p>What we honestly don't know is how these specimens were bought, and when. If they came from old collections, their environmental cost today is close to zero, and the real question becomes what we learn, not what we disturbed.</p>
-          <p>So, while you stand here: if this circle held only New Jersey rocks, would you stop longer, or walk past? What would you gain, and what would you lose?</p>
-        </div>
-      </details>
-      <div class="activity">
-        <p><strong>Consider:</strong> If this porthole held only New Jersey rocks, would you stop longer, or walk past? What would you gain, and what would you lose?</p>
-      </div>
     </section>
   </main>
 </body>
