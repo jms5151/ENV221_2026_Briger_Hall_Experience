@@ -7,41 +7,103 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&amp;family=Source+Sans+3&amp;family=IBM+Plex+Mono&amp;display=swap" rel="stylesheet">
+  <style>
+    /* Page-specific styles for the seating map and photo list. */
+    .seat-map { margin: 1rem 0 0.5rem; }
+    .seat-map img { display: block; width: 100%; height: auto; border-radius: 8px; }
+    .map-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.2rem;
+      margin: 0 0 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .map-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+    .dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; }
+    .dot.firm { background: var(--moss); }
+    .dot.mixed { background: var(--ink); }
+    .dot.gravel { background: var(--rust); }
+    .seat-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .seat-list figure { margin: 0; }
+    .seat-list img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .seat-list figcaption { font-size: 0.9rem; }
+    .seat-list .surface {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to feature guide</a>
   <main class="station" id="main-content">
     <header>
       <div class="eyebrow">Briger Hall Discovery Guide</div>
-      <!-- Replace the title here AND in the title tag above. -->
       <h1>An Invitation to Stay Outside: Outdoor Seating Areas</h1>
-      <p class="intro">Outdoor spaces with seating around Briger Hall offers a place to study, talk, or take a break in the open air. Like a small park serving the building, it can bring our community contact with nature on an ordinary day. But what makes an outdoor space somewhere people actually want to stay?</p>
+      <p class="intro">The outdoor seating around Briger Hall offers a place to study, talk, or take a break in the open air. Like a small park serving the building, it can bring our community contact with nature on an ordinary day. But what makes an outdoor space somewhere people actually want to stay?</p>
     </header>
 
     <section class="section" aria-labelledby="find-heading">
       <h2 id="find-heading"><span class="marker" aria-hidden="true">1</span> Find it</h2>
-      <p><strong>Where to find it:</strong>Outdoors, at ground level. Begin at the main glass entrance. Wooden benches sit inside rust-colored steel planters along the glass wall, among bright green grasses and small magnolia trees. From there, follow the walkway marked Ivy Lane Neighborhood, where more benches line the path. Keep walking around the building to find the lower terrace with green metal tables and chairs, the round stone terrace ringed by boulders, and a single bench on a gravel path among young trees.</p>
-      <!-- REQUIRED: Upload an original photo or sketch to images/. Avoid photos of people.
-           Replace the filename, alt text, and caption. Paths are case-sensitive. -->
+      <p><strong>Where to find it:</strong> Start at Briger Hall's main glass entrance. Just outside the doors, wooden benches sit in a row between rust-colored steel planters filled with bright green grasses and small magnolia trees. Choose any of these benches. The path from the doors to the benches is flat concrete paving.</p>
       <figure class="feature-image">
-        <img src="images/your-feature.jpg" alt="[Describe your photo or sketch, including the relevant visible detail.]">
-        <figcaption>Benches tucked into steel planters beside the main entrance of Briger Hall. Photo by the authors, November 2026.</figcaption>
+        <img src="images/outdoor-seating.jpg" alt="A row of weathered wooden benches set between rust-colored steel planters of green grasses and small magnolia trees, beside a wide concrete walkway leading to Briger Hall's glass entrance doors.">
+        <figcaption>Start here: benches tucked into steel planters beside the main entrance of Briger Hall. Photo by the authors, November 2026.</figcaption>
       </figure>
       <div class="activity">
-        <p><strong>Look closely:</strong>Sit on one of the benches by the entrance. Look at where the bench legs meet the ground. The seat rests on hard paving, but the grasses behind your shoulders grow in open soil inside the steel planter. Then walk to the green chairs. They stand on loose dark gravel, not concrete. From one seat, count how many different ground surfaces you can see: paving, gravel, mulch, soil, grass. Rain and sunlight do not act the same way on each one.</p>
+        <p><strong>Look closely:</strong> Sit on one of the benches. Look at where the bench legs meet the ground. The seat rests on hard paving, but the grasses behind your shoulders grow in open soil inside the steel planter. From your seat, count how many different ground surfaces you can see: paving, gravel, mulch, soil, grass. Rain and sunlight do not act the same way on each one.</p>
       </div>
+
+      <h3>Optional: more places to sit</h3>
+      <p>If you have time, ten more seating areas surround the building. The numbers on the map match the photos below and show roughly where each was taken. Pin colors show the ground under the seats as it appears in our photos.</p>
+      <figure class="seat-map">
+        <img src="images/outdoor-seating-map.jpg" alt="Aerial map of Briger Hall with eleven numbered pins: pin 1, the starting benches, sits on the south side where the building bends; pins 2 to 5 are in the courtyard and planted slope between Briger Hall and the Commons; pin 8 is the terrace east of the Commons; pins 6, 9, 10, and 11 are along the north, south, and west sides of the long west wing; pin 7 is on the walkway beside Ivy Lane.">
+        <figcaption>Approximate locations of the seating areas, placed from our photos rather than GPS. The aerial image predates the finished landscaping.</figcaption>
+      </figure>
+      <div class="map-legend" aria-hidden="true">
+        <span><i class="dot firm"></i> Firm, level paving</span>
+        <span><i class="dot mixed"></i> Paved path, some seats on gravel</span>
+        <span><i class="dot gravel"></i> Loose gravel</span>
+      </div>
+      <p class="uncertainty"><strong>Access note:</strong> The surfaces listed here come from our photographs. We have not yet walked every route to check for slopes, steps, or curbs, so do not assume every seating area is step-free. The firm, level path from the main entrance to the starting benches is the most reliable choice.</p>
+      <ol class="seat-list" id="seat-list">
+        <li><figure><img src="images/outdoor-seating-courtyard-chairs.jpg" alt="Wooden benches along concrete paths around a gravel bed with green metal café tables and chairs under young trees, enclosed by glass walls." loading="lazy"><figcaption><b>2.</b> Courtyard tables and benches<span class="surface">Paved path, tables on gravel</span></figcaption></figure></li>
+        <li><figure><img src="images/outdoor-seating-stone-circle.jpg" alt="A round concrete plaza with a dark stone basin and a pink stone ring at its center, ringed by large boulders and plantings." loading="lazy"><figcaption><b>3.</b> Stone circle ringed by boulders<span class="surface">Firm paving</span></figcaption></figure></li>
+        <li><figure><img src="images/outdoor-seating-boulders.jpg" alt="Large boulders on dark gravel in front of green café chairs and tables, with a planted hillside and trees behind." loading="lazy"><figcaption><b>4.</b> Boulders and café chairs<span class="surface">Loose gravel</span></figcaption></figure></li>
+        <li><figure><img src="images/outdoor-seating-woodland-bench.jpg" alt="A single wooden bench on a dark gravel path surrounded by young trees and shrubs in autumn color." loading="lazy"><figcaption><b>5.</b> Woodland bench on a gravel path<span class="surface">Loose gravel</span></figcaption></figure></li>
+        <li><figure><img src="images/outdoor-seating-sunken-courtyard.jpg" alt="View from above of a sunken courtyard with winding paved paths, benches, and red and orange shrubs between stone walls; stairs lead down on the left." loading="lazy"><figcaption><b>6.</b> Sunken courtyard<span class="surface">Paved; stairs visible, step-free route not confirmed</span></figcaption></figure></li>
+        <li><figure><img src="images/outdoor-seating-slab-benches.jpg" alt="Backless wooden slab benches along a wide concrete walkway between steel planters and a gray brick building." loading="lazy"><figcaption><b>7.</b> Slab benches on the walkway<span class="surface">Firm paving</span></figcaption></figure></li>
+        <li><figure><img src="images/outdoor-seating-terrace-meadow.jpg" alt="View from above of a paved terrace with café tables and chairs on a gravel bed, young trees, and a meadow on the slope beyond." loading="lazy"><figcaption><b>8.</b> Lower terrace by the meadow<span class="surface">Paved terrace, tables on gravel</span></figcaption></figure></li>
+        <li><figure><img src="images/outdoor-seating-benches.jpg" alt="Two wooden benches on stone paving in front of plantings and a building with a stone base and large windows." loading="lazy"><figcaption><b>9.</b> Benches along the stone base<span class="surface">Firm paving</span></figcaption></figure></li>
+        <li><figure><img src="images/outdoor-seating-curved-bench.jpg" alt="A long wooden bench on a gravel strip beside a large boulder and a young birch tree, next to a stone-paved path." loading="lazy"><figcaption><b>10.</b> Long bench by the boulder<span class="surface">Paved path, bench on gravel</span></figcaption></figure></li>
+        <li><figure><img src="images/outdoor-seating-wire-chairs.jpg" alt="A loose circle of white wire chairs on gravel in front of shrubs, a long wooden bench, and the building's glass wall." loading="lazy"><figcaption><b>11.</b> Wire chairs on gravel<span class="surface">Loose gravel</span></figcaption></figure></li>
+      </ol>
     </section>
 
     <section class="section" aria-labelledby="interesting-heading">
       <h2 id="interesting-heading"><span class="marker" aria-hidden="true">2</span> Why is it interesting?</h2>
-      <p><strong>Our observation:</strong>During our visit on November 10, the weather was sunny and relatively warm for a New Jersey fall. We noticed several students using the outdoor seating to talk with friends, work on their laptops, and eat lunch. This made us consider how an outdoor space can encourage people to pause and take a breather rather than simply pass through.
-
-Seating makes spending time outdoors easier to incorporate into daily life. Students can study, socialize, and eat while spending time around greenery. Although this landscape is deliberately designed, it still offers opportunities to notice plants, changing leaves, and seasonal weather. In this sense, the space can serve Briger Hall somewhat as Central Park serves New York City: a place within a built environment where people can gather and experience nature, though at a much smaller scale.
-
-This raises an environmental question about how we design the spaces surrounding buildings. Seating can help turn greenery into a place people actively experience rather than scenery they pass. However, creating a comfortable gathering space also involves choices about paving, vegetation, shade, and maintenance. These choices influence both people’s experience of nature and how much room remains for planting, including opportunities to support native species. The space invites us to consider how a campus landscape can accommodate people while making room for other living things.</p>
-      <p>Research suggests why opportunities to experience nature deserve attention. In a 2015 experiment, participants who took a 90-minute nature walk reported less repetitive negative thinking afterward than participants who took an urban walk. This does not establish that sitting outside Briger produces the same effect, but it offers a reason to consider how campus design can make experiences of nature part of an ordinary day.<a href="#source-1">[1]</a></p>
-      <!-- Distinguish what you observed from what a source explains. Do not assume a
-           general source verifies a technical specification of this building. -->
+      <p><strong>Our observation:</strong> During our visit on November 10, the weather was sunny and relatively warm for a New Jersey fall. We noticed several students using the outdoor seating to talk with friends, work on their laptops, and eat lunch. This made us consider how an outdoor space can encourage people to pause and take a breather rather than simply pass through.</p>
+      <p>Seating makes spending time outdoors easier to incorporate into daily life. Students can study, socialize, and eat while spending time around greenery. Although this landscape is deliberately designed, it still offers opportunities to notice plants, changing leaves, and seasonal weather. In this sense, the space can serve Briger Hall somewhat as Central Park serves New York City: a place within a built environment where people can gather and experience nature, though at a much smaller scale.</p>
+      <p>This raises an environmental question about how we design the spaces surrounding buildings. Seating can help turn greenery into a place people actively experience rather than scenery they pass. However, creating a comfortable gathering space also involves choices about paving, vegetation, shade, and maintenance. These choices influence both people’s experience of nature and how much room remains for planting, including opportunities to support native species. The space invites us to consider how a campus landscape can accommodate people while making room for other living things.</p>
+      <p>Research suggests why opportunities to experience nature deserve attention. In a 2015 experiment, participants who took a 90-minute nature walk reported less repetitive negative thinking afterward than participants who took an urban walk. This does not establish that sitting outside Briger produces the same effect, but it offers a reason to consider how campus design can make experiences of nature part of an ordinary day. <a href="#source-1">[1]</a></p>
     </section>
 
     <section class="section" aria-labelledby="what-if-heading">
@@ -50,30 +112,23 @@ This raises an environmental question about how we design the spaces surrounding
         <p class="scenario-label">Hypothetical alternative</p>
         <p>Imagine the same number of outdoor seats around Briger Hall in a mostly paved courtyard with little surrounding vegetation. Students could still study, eat lunch, and gather with friends, but they would have fewer opportunities to spend time among plants or notice seasonal changes. This alternative asks whether providing somewhere to sit is enough to make an inviting outdoor space, or whether the surrounding landscape is an essential part of the experience.</p>
       </div>
-      <p><strong>For the environment:</strong>Replacing surrounding vegetation with more paving could make the seating area hotter during sunny weather. Trees and plants cool their surroundings by providing shade and releasing water through evapotranspiration. A courtyard with less vegetation would lose some of that cooling, depending on its materials and other sources of shade. This explains a potential consequence of our hypothetical alternative; we have not measured temperatures at Briger Hall.<a href="#source-2">[2]</a></p>
-      <p><strong>For people:</strong>A mostly paved courtyard could offer flexible space for larger gatherings, depending on its layout. However, with less vegetation and shade, students could face greater exposure to direct sunlight, making sitting or working outside less comfortable on warm days. [2] Students could still socialize, study, and eat lunch, but would have fewer opportunities to experience greenery and seasonal changes while doing so.</p>
-      <p class="uncertainty"><strong>What we do not know:</strong>Our observations came from one sunny, relatively warm day, so we do not know how often students use the seating in other weather or seasons. We also have not measured shade or temperatures. If a paved courtyard included shade structures, it might offer similar comfort during warm weather, changing our comparison. Repeated observations and temperature measurements would help us assess these differences.</p>
+      <p><strong>For the environment:</strong> Replacing surrounding vegetation with more paving could make the seating area hotter during sunny weather. Trees and plants cool their surroundings by providing shade and through evapotranspiration: water evaporates from the soil and is released through plant leaves, which cools the surrounding air. A courtyard with less vegetation would lose some of that cooling, depending on its materials and other sources of shade. This explains a potential consequence of our hypothetical alternative; we have not measured temperatures at Briger Hall. <a href="#source-2">[2]</a></p>
+      <p><strong>For people:</strong> A mostly paved courtyard could offer flexible space for larger gatherings, depending on its layout. However, with less vegetation and shade, students could face greater exposure to direct sunlight, making sitting or working outside less comfortable on warm days. <a href="#source-2">[2]</a> Students could still socialize, study, and eat lunch, but would have fewer opportunities to experience greenery and seasonal changes while doing so.</p>
+      <p class="uncertainty"><strong>What we do not know:</strong> Our observations came from one sunny, relatively warm day, so we do not know how often students use the seating in other weather or seasons. We also have not measured shade or temperatures. If a paved courtyard included shade structures, it might offer similar comfort during warm weather, changing our comparison. Repeated observations and temperature measurements would help us assess these differences.</p>
     </section>
 
     <section class="section" aria-labelledby="sources-heading">
       <h2 id="sources-heading"><span class="marker" aria-hidden="true">4</span> Show how you know</h2>
-      <!-- REQUIRED: At least two relevant sources beyond AI output. Replace these
-           example URLs and descriptions. Add entries and inline citations as needed. -->
       <ol class="sources">
-        <li id="source-1"> <a href="https://pubmed.ncbi.nlm.nih.gov/26124129/">Nature experience reduces rumination and subgenual prefrontal cortex activation</a>. June 29, 2015 Participants who took a 90-minute nature walk reported less repetitive negative thinking afterward than those who took an urban walk. It does not establish the same benefit from sitting outside Briger Hall.</li>
-        <li id="source-2">US Environmental Protection Agency <a href="https://www.epa.gov/heatislands/benefits-trees-and-vegetation">Benefits of Trees and Vegetation</a>. May 15,2026 Explains how trees and vegetation cool outdoor spaces through shade and evapotranspiration, supporting our comparison with a courtyard that has less greenery.</li>
+        <li id="source-1">Bratman, G. N., Hamilton, J. P., Hahn, K. S., Daily, G. C., &amp; Gross, J. J. (2015). <a href="https://pubmed.ncbi.nlm.nih.gov/26124129/">Nature experience reduces rumination and subgenual prefrontal cortex activation</a>. <em>Proceedings of the National Academy of Sciences</em>, 112(28), 8567–8572. Participants who took a 90-minute nature walk reported less repetitive negative thinking afterward than those who took an urban walk. It does not establish the same benefit from sitting outside Briger Hall.</li>
+        <li id="source-2">U.S. Environmental Protection Agency. <a href="https://www.epa.gov/heatislands/benefits-trees-and-vegetation">Benefits of Trees and Vegetation</a>. Updated May 15, 2026. Explains how trees and vegetation cool outdoor spaces through shade and evapotranspiration, supporting our comparison with a courtyard that has less greenery.</li>
       </ol>
     </section>
 
     <section class="section" aria-labelledby="listen-heading">
       <h2 id="listen-heading"><span class="marker" aria-hidden="true">5</span> Listen and look</h2>
-      <!-- REQUIRED: Create an AI-narrated guide or conversational podcast clip with
-           ElevenLabs, UNDER 4 minutes. Listen, correct, and regenerate as needed.
-           Include: a detail to examine, checked explanation, your counterfactual,
-           environmental and human tradeoffs, honest uncertainty, and a visitor question.
-           Upload your MP3 to audio/ and replace BOTH paths below. -->
       <figure class="audio-guide">
-        <figcaption id="audio-caption">A Place to Stay Outside: Briger Hall's Outdoor Seating — AI-generated Narrated Guide, 3:41. Visitors will explore how outdoor seating brings nature into everyday campus life and consider how a courtyard with less greenery could change the experience for people and the environment.</figcaption>
+        <figcaption id="audio-caption">A Place to Stay Outside: Briger Hall's Outdoor Seating — AI-generated narrated guide, 3:16. Visitors will explore how outdoor seating brings nature into everyday campus life and consider how a courtyard with less greenery could change the experience for people and the environment.</figcaption>
         <audio controls preload="metadata" src="audio/outdoor-seating.mp3" aria-describedby="audio-caption">
           Your browser does not support the audio player. Use the MP3 link below.
         </audio>
@@ -81,48 +136,28 @@ This raises an environmental question about how we design the spaces surrounding
       </figure>
       <details class="transcript">
         <summary>Read the complete audio transcript</summary>
-        <!-- Replace with the COMPLETE transcript of the final recording, not a summary.
-             Use paragraphs; label speakers if conversational. Update if audio changes. -->
         <div class="transcript-text">
-          <p>Take a moment to look at the outdoor seating around Briger Hall. Choose one seat and imagine spending an hour there. Would you read, work on your laptop, eat lunch, or talk with a friend?
-
-Now look beyond the seat. What plants can you see? Is the spot shaded or exposed to the sun? Listen for a moment, too. Which sounds draw your attention?
-
-During our visit on November tenth, the weather was sunny and relatively warm for a New Jersey fall. We noticed several students using these seats to talk with friends, work on their laptops, and eat lunch. The space was somewhere people stayed, rather than simply passed through.
-
-That observation made us think about how seating can bring contact with nature into an ordinary day. You do not necessarily have to set aside time for a separate walk or visit to a park. When conditions allow, you can bring an everyday activity outside.
-
-In that sense, this space can serve Briger Hall somewhat as Central Park serves New York City, although at a much smaller scale. It offers a place within a built environment where people can gather and spend time around greenery.
-
-Of course, this is a deliberately designed landscape. Decisions about seating, paving, plants, and shade shape how we experience it. They also shape how much room remains for other living things.
-
-Research gives us a reason to consider these everyday encounters with nature. In a 2015 study by Gregory Bratman and colleagues, participants who took a ninety-minute nature walk reported less repetitive negative thinking afterward than participants who took an urban walk.
-
-That finding does not prove that sitting outside Briger Hall has the same effect. Walking through a natural setting for ninety minutes is different from eating lunch beside a building. Still, the study suggests why opportunities to experience nature deserve attention.
-
-Now imagine a hypothetical alternative. Keep the same number of seats, but place them in a mostly paved courtyard with little surrounding vegetation.
-
-Students could still study, eat, and meet friends. Depending on its layout, the courtyard might provide flexible space for larger gatherings. But what might be lost?
-
-According to the Environmental Protection Agency, trees and vegetation cool their surroundings through shade and evapotranspiration. That means water evaporates from soil and is released through plant leaves, helping cool the surrounding air.
-
-With less vegetation, the courtyard could lose some of that cooling, which makes it so nice to sit outside. Greater exposure to direct sunlight could also make sitting or working outside less comfortable on warm days. People would still have somewhere to sit, but fewer opportunities to spend time among plants or notice seasonal changes.
-
-There are uncertainties in this comparison. Our visit captured just one sunny, relatively warm day. We do not know how often students use these seats in colder, wetter, or hotter weather. We have not measured temperatures or shade. A paved courtyard with shade structures might offer similar comfort in some conditions.
-
-Look again at the seat you chose. Think about what would make you want to stay: the seating itself, the surrounding greenery, shade, quiet, or something else.</p>
+          <p>Take a moment to look at the outdoor seating around Briger Hall. Choose one seat and imagine spending an hour there. Would you read, work on your laptop, eat lunch, or talk with a friend?</p>
+          <p>Now look beyond the seat. What plants can you see? Is the spot shaded or exposed to the sun? Listen for a moment, too. Which sounds draw your attention?</p>
+          <p>During our visit on November tenth, the weather was sunny and relatively warm for a New Jersey fall. We noticed several students using these seats to talk with friends, work on their laptops, and eat lunch. The space was somewhere people stayed, rather than simply passed through.</p>
+          <p>That observation made us think about how seating can bring contact with nature into an ordinary day. You do not necessarily have to set aside time for a separate walk or visit to a park. When conditions allow, you can bring an everyday activity outside.</p>
+          <p>In that sense, this space can serve Briger Hall somewhat as Central Park serves New York City, although at a much smaller scale. It offers a place within a built environment where people can gather and spend time around greenery.</p>
+          <p>Of course, this is a deliberately designed landscape. Decisions about seating, paving, plants, and shade shape how we experience it. They also shape how much room remains for other living things.</p>
+          <p>Research gives us a reason to consider these everyday encounters with nature. In a 2015 study by Gregory Bratman and colleagues, participants who took a ninety-minute nature walk reported less repetitive negative thinking afterward than participants who took an urban walk.</p>
+          <p>That finding does not prove that sitting outside Briger Hall has the same effect. Walking through a natural setting for ninety minutes is different from eating lunch beside a building. Still, the study suggests why opportunities to experience nature deserve attention.</p>
+          <p>Now imagine a hypothetical alternative. Keep the same number of seats, but place them in a mostly paved courtyard with little surrounding vegetation.</p>
+          <p>Students could still study, eat, and meet friends. Depending on its layout, the courtyard might provide flexible space for larger gatherings. But what might be lost?</p>
+          <p>According to the Environmental Protection Agency, trees and vegetation cool their surroundings through shade and evapotranspiration. That means water evaporates from soil and is released through plant leaves, helping cool the surrounding air.</p>
+          <p>With less vegetation, the courtyard could lose some of that cooling, which makes it so nice to sit outside. Greater exposure to direct sunlight could also make sitting or working outside less comfortable on warm days. People would still have somewhere to sit, but fewer opportunities to spend time among plants or notice seasonal changes.</p>
+          <p>There are uncertainties in this comparison. Our visit captured just one sunny, relatively warm day. We do not know how often students use these seats in colder, wetter, or hotter weather. We have not measured temperatures or shade. A paved courtyard with shade structures might offer similar comfort in some conditions.</p>
+          <p>Look again at the seat you chose. Think about what would make you want to stay: the seating itself, the surrounding greenery, shade, quiet, or something else.</p>
         </div>
       </details>
       <div class="activity">
-        <p><strong>Consider:</strong>What is one change that would make you more likely to spend time here?</p>
+        <p><strong>Consider:</strong> What is one change that would make you more likely to spend time here?</p>
       </div>
     </section>
-
-    <!-- BEFORE SUBMITTING: Replace all bracketed text, example URLs, and media paths.
-         Check the published page, image, audio, transcript, and links on a phone or
-         in a signed-out browser. Test with 3 people outside class, keep anonymous
-         notes, and make at least one revision based on feedback.
-         Submit your page link, revisions, and reflection separately to the instructor. -->
   </main>
+
 </body>
 </html>
