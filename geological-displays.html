@@ -30,6 +30,7 @@
     .chart .bar-air { fill: var(--rust); }
     .chart .bar-sea { fill: var(--moss); }
     .chart .bar-truck { fill: var(--moss); }
+    .chart .bar-car { fill: var(--muted); }
   </style>
 </head>
 <body>
@@ -90,6 +91,18 @@
     <section class="section" aria-labelledby="interesting-heading">
       <h2 id="interesting-heading"><span class="marker" aria-hidden="true">3</span> Why is it interesting?</h2>
       <p><strong>Our observation:</strong> We counted and transcribed every label. There are 24 specimens on five shelves, from 14 countries on six continents. Six come from China, two from Brazil, two from Pakistan, two from India, and two from the United States (Tennessee and Washington). None is from New Jersey, and one, the stibnite, has no recorded locality. Every label carries the same credit line: Carl '64 &amp; Edna Heimowitz Collection.</p>
+      <div class="activity quiz">
+        <p><strong>Quick check:</strong> Before reading on, guess how many of the 24 specimens came from Africa.</p>
+        <ol type="A">
+          <li>None</li>
+          <li>Two</li>
+          <li>Four</li>
+        </ol>
+        <details>
+          <summary>Show answer</summary>
+          <p><strong>C.</strong> Four: ruby in zoisite from Tanzania, barite and cerussite on galena from Morocco, calcite from Namibia, and malachite from the Democratic Republic of the Congo. Count them yourself in the label table under <a href="#sources-heading">References</a>.</p>
+        </details>
+      </div>
       <p>The specimens are on loan to Princeton's Mineral and Gem Collection, which holds about 6,000 catalogued specimens gathered over roughly 200 years, and which lists Heimowitz loans of pyrite, barite, cerussite, malachite and desert rose selenite, all of which you can see here. <a href="#source-1">[1]</a></p>
       <p>Grouped by how they formed, the shelves tell a story about the whole planet. The desert rose and selenite grew as water evaporated. Fluorite, galena, sphalerite and barite crystallised from hot, mineral-rich water moving through cracks in rock. Malachite is what copper ore becomes as it weathers. Nephrite and ruby in zoisite were cooked and squeezed deep underground. And the stilbite, heulandite, apophyllite and cavansite grew inside gas bubbles in cooling lava.</p>
       <p>That last group is the surprise. The same zeolite minerals, stilbite, heulandite, chabazite and prehnite, grew the same way in the basalt of New Jersey's First Watchung Mountain, lava that erupted about 201 million years ago at the end of the Triassic period, <a href="#source-8">[8]</a> and the trap-rock quarries around Paterson, about an hour from this room, were famous for them a century ago. <a href="#source-2">[2]</a> The best crystals formed in open pockets, "vugs", that quarrying happened to expose. <a href="#source-2">[2]</a> We observed that the porthole holds Indian zeolites but no New Jersey ones. Figure 3 shows the New Jersey basalt that hosted these crystals.</p>
@@ -141,9 +154,9 @@
         <li><strong>For comparison:</strong> trucking 24 kg of minerals 70 miles from Franklin would release about 0.3 kg. Shipping the global set by sea would release about 13 kg. <a href="#source-7">[7]</a></li>
       </ul>
       <figure class="chart">
-        <svg viewBox="0 0 400 210" role="img" aria-labelledby="chart-title chart-desc">
-          <title id="chart-title">Estimated carbon dioxide from moving 24 mineral specimens</title>
-          <desc id="chart-desc">Horizontal bars: flying the specimens 10,000 kilometres emits about 180 kilograms of carbon dioxide, shipping them by sea about 13 kilograms, and trucking them 70 miles from Franklin, New Jersey about 0.3 kilograms.</desc>
+        <svg viewBox="0 0 400 279" role="img" aria-labelledby="chart-title chart-desc">
+          <title id="chart-title">Estimated carbon dioxide from moving 24 mineral specimens, compared with one visitor's drive</title>
+          <desc id="chart-desc">Horizontal bars on one linear scale: flying the specimens 10,000 kilometres emits about 180 kilograms of carbon dioxide, shipping them by sea about 13 kilograms, and trucking them 70 miles from Franklin, New Jersey about 0.3 kilograms. For comparison, one visitor driving 140 miles from Princeton to Sterling Hill and back emits about 42 kilograms.</desc>
           <text class="bar-label" x="0" y="18">Flown 10,000 km</text>
           <rect class="bar-air" x="0" y="26" width="320" height="26" rx="3"/>
           <text class="bar-value" x="328" y="45">180 kg</text>
@@ -153,8 +166,11 @@
           <text class="bar-label" x="0" y="156">Trucked 70 miles from Franklin, NJ</text>
           <rect class="bar-truck" x="0" y="164" width="2" height="26" rx="1"/>
           <text class="bar-value" x="10" y="183">0.3 kg</text>
+          <text class="bar-label" x="0" y="225">One visitor driving to Sterling Hill and back</text>
+          <rect class="bar-car" x="0" y="233" width="74" height="26" rx="3"/>
+          <text class="bar-value" x="82" y="252">42 kg</text>
         </svg>
-        <figcaption><strong>Figure 5.</strong> Estimated CO<sub>2</sub> from moving 24 specimens (about 24 kg in total). The first two bars assume the specimens travel an average of 10,000 km, and the last assumes the New Jersey set travels 70 miles from Franklin. Our own calculation from EPA factors <a href="#source-7">[7]</a>.</figcaption>
+        <figcaption><strong>Figure 5.</strong> Estimated CO<sub>2</sub> from moving 24 specimens (about 24 kg in total). The first two bars assume the specimens travel an average of 10,000 km, and the third assumes the New Jersey set travels 70 miles from Franklin. The grey bar, for comparison, is one visitor's 140-mile round trip by car from Princeton to Sterling Hill: 140 miles × 0.297 kg of CO<sub>2</sub> per vehicle-mile, about 42 kg. All bars share one linear scale. Our own calculation from EPA factors, using the assumptions stated above <a href="#source-7">[7]</a>.</figcaption>
       </figure>
       <p>Shipping is probably a small part of the total environmental cost compared with the mining itself, but we could not measure the mining.</p>
       <div class="activity quiz">
@@ -234,7 +250,7 @@
         <li id="source-4">Mindat.org. <a href="https://www.mindat.org/locentry-38770.html">Upper New Street Quarry, Paterson, Passaic County, New Jersey</a>. Accessed November 2026. Dates of operation of a Paterson trap-rock quarry (1893 to 1925).</li>
         <li id="source-5">Sterling Hill Mining Museum. <a href="https://sterlinghillminingmuseum.org/minerals-of-sterling-hill-and-franklin">Minerals of Sterling Hill and Franklin</a>. Accessed November 2026. Number of mineral species, fluorescent minerals, and minerals unique to the Franklin and Sterling Hill deposits.</li>
         <li id="source-6">Royce, K. <a href="https://mineralcare.web.ox.ac.uk/files/royce2022-mincareversionof2019seahaposterpdf">Mineral Instability: More Common Than You'd Think</a>. University of Oxford, School of Geography and the Environment, 2019 (2022 version). Share of mineral species vulnerable under museum conditions and the role of light in fading.</li>
-        <li id="source-7">U.S. Environmental Protection Agency, Center for Corporate Climate Leadership. <a href="https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf">Emission Factors for Greenhouse Gas Inventories (GHG Emission Factors Hub)</a>. January 2025. Table 8 gives the freight factors used in our shipping estimate (aircraft 1.086, truck 0.186 and waterborne 0.077 kg CO<sub>2</sub> per short ton-mile); Table 10 gives the medium-haul passenger flight factor (0.129 kg CO<sub>2</sub> per passenger-mile) used for the comparison.</li>
+        <li id="source-7">U.S. Environmental Protection Agency, Center for Corporate Climate Leadership. <a href="https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf">Emission Factors for Greenhouse Gas Inventories (GHG Emission Factors Hub)</a>. January 2025. Table 8 gives the freight factors used in our shipping estimate (aircraft 1.086, truck 0.186 and waterborne 0.077 kg CO<sub>2</sub> per short ton-mile); Table 10 gives the medium-haul passenger flight factor (0.129 kg CO<sub>2</sub> per passenger-mile) used for the comparison and the passenger-car factor (0.297 kg CO<sub>2</sub> per vehicle-mile) used for the visitor's drive in Figure 5.</li>
         <li id="source-8">Blackburn, T. J., et al. <a href="https://doi.org/10.1126/science.1234204">Zircon U-Pb Geochronology Links the End-Triassic Extinction with the Central Atlantic Magmatic Province</a>. <em>Science</em> 340, 941–945, 2013. Age of the Orange Mountain Basalt, which forms First Watchung Mountain. The basalt itself yielded no datable zircon; its age comes from the chemically identical Palisade Sill that fed it, dated to 201.52 million years ago.</li>
         <li id="source-9">Franklin-Ogdensburg Mineralogical Society. <a href="https://fomsnj.org/Fluorescent_Franklin_Mineral.aspx?OFID=116">Fluorescent clinohedrite, calcite, willemite and hardystonite under shortwave UV light</a>. Accessed November 2026. Fluorescence colours of willemite (green) and calcite (orange-red) from Franklin, New Jersey.</li>
       </ol>
